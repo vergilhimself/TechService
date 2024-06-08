@@ -1,0 +1,41 @@
+﻿<Window
+    x:Class="Практика_макет.Статистика"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Практика_макет"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Статистика"
+    Width="640"
+    Height="480"
+    MinWidth="640"
+    MinHeight="480"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="0.5*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="0.4*" />
+        </Grid.ColumnDefinitions>
+        <Button
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Click="Открыть_список_заявок"
+            Content="Назад" />
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Label Content="Количество выполненных заявок:" />
+            <TextBox></TextBox>
+            <Label Content="Среднее время выполнения заявки:" />
+            <TextBox></TextBox>
+            <Label Content="Статистика по типам неисправностей:" />
+            <TextBox></TextBox>
+        </StackPanel>
+
+    </Grid>
+</Window>
