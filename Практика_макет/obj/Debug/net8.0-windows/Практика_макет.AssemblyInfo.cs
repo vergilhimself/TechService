@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Практика_макет")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7eec4549ba9180dcc7744eb52e253ff6f4e5f8d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b35d4d06d52694960e93f18ad2c248e825c1328")]
 [assembly: System.Reflection.AssemblyProductAttribute("Практика_макет")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Практика_макет")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

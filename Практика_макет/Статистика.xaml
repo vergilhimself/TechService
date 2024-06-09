@@ -30,11 +30,11 @@
             Content="Назад" />
         <StackPanel Grid.Row="1" Grid.Column="1">
             <Label Content="Количество выполненных заявок:" />
-            <TextBox></TextBox>
-            <Label Content="Среднее время выполнения заявки:" />
-            <TextBox></TextBox>
+            <TextBox TextChanged="TextBox_TextChanged" x:Name="CountRequests"></TextBox>
+            <Label Content="Среднее время выполнения заявки (дни):" />
+            <TextBox x:Name="AverageTime"></TextBox>
             <Label Content="Статистика по типам неисправностей:" />
-            <TextBox></TextBox>
+            <ListBox x:Name="RepairParts"></ListBox>
         </StackPanel>
 
     </Grid>

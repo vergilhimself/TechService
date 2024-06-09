@@ -1,7 +1,24 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Windows;
 using System.Windows.Controls;
-
+using System.Windows.Media.Imaging;
+using ZXing;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using ZXing;
+using ZXing.QrCode;
 namespace Практика_макет
 {
     /// <summary>
@@ -16,6 +33,7 @@ namespace Практика_макет
         public Создание_редоктирование_заявки(RequestDetail requestDetail)
         {
             InitializeComponent();
+            GenerateQRCode();
             _requestDetail = requestDetail;
             DataContext = _requestDetail;
             AddData();
@@ -199,7 +217,37 @@ namespace Практика_макет
         }
 
 
+        private  void GenerateQRCode()
+        {
 
+            string googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdHb7SsdLn9oGX9lh4Uri-ICDk82hmQMc258UpER61cougZOw/viewform?usp=sf_link";
+
+            var options = new QrCodeEncodingOptions
+            {
+                DisableECI = true,
+                CharacterSet = "UTF-8",
+                Height = 200,
+                Width = 200
+            };
+            var writer = new ZXing.Windows.Compatibility.BarcodeWriter();
+            writer.Format = BarcodeFormat.QR_CODE;
+            writer.Options = options;
+
+            var result = writer.Write(googleFormUrl);
+
+
+            var bitmap = new BitmapImage();
+            using (var stream = new System.IO.MemoryStream())
+            {
+                result.Save(stream, System.Drawing.Imaging.ImageFormat.Bmp);
+                stream.Seek(0, System.IO.SeekOrigin.Begin);
+                bitmap.BeginInit();
+                bitmap.StreamSource = stream;
+                bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                bitmap.EndInit();
+            }
+            QrCodeImage.Source = bitmap;
+        }
 
         private void new_comment_click(object sender, RoutedEventArgs e)
         {

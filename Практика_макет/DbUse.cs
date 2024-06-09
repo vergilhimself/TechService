@@ -3,14 +3,17 @@ using Microsoft.VisualBasic.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-
+using System.Windows.Media.Imaging;
+using ZXing;
 namespace Практика_макет
 {
     public static class DbUse
     {
+        
         public static bool Auth(string login, string password)
         {
             using (ApplicationDbContext dbContext = new ApplicationDbContext())

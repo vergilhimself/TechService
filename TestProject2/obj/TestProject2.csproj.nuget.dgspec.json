@@ -139,6 +139,10 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[5.1.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.6, )"
@@ -146,6 +150,18 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.6, )"
+            },
+            "Twilio": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "ZXing.Net": {
+              "target": "Package",
+              "version": "[0.16.9, )"
+            },
+            "ZXing.Net.Bindings.Windows.Compatibility": {
+              "target": "Package",
+              "version": "[0.16.12, )"
             }
           },
           "imports": [

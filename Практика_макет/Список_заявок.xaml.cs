@@ -49,7 +49,9 @@ namespace Практика_макет
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Статистика статистика = new Статистика();
+            статистика.Show();
+            this.Close();
         }
 
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)

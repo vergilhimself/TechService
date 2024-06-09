@@ -75,3 +75,8 @@ C:\Users\fidan\OneDrive\Рабочий стол\ТехСервис\Практи�
 C:\Users\fidan\OneDrive\Рабочий стол\ТехСервис\Практика_макет\obj\Debug\net8.0-windows\Практика_макет.pdb
 C:\Users\fidan\OneDrive\Рабочий стол\ТехСервис\Практика_макет\obj\Debug\net8.0-windows\Практика_макет.genruntimeconfig.cache
 C:\Users\fidan\OneDrive\Рабочий стол\ТехСервис\Практика_макет\obj\Debug\net8.0-windows\ref\Практика_макет.dll
+C:\Users\fidan\OneDrive\Рабочий стол\ТехСервис\Практика_макет\bin\Debug\net8.0-windows\Castle.Core.dll
+C:\Users\fidan\OneDrive\Рабочий стол\ТехСервис\Практика_макет\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\fidan\OneDrive\Рабочий стол\ТехСервис\Практика_макет\bin\Debug\net8.0-windows\Twilio.dll
+C:\Users\fidan\OneDrive\Рабочий стол\ТехСервис\Практика_макет\bin\Debug\net8.0-windows\zxing.dll
+C:\Users\fidan\OneDrive\Рабочий стол\ТехСервис\Практика_макет\bin\Debug\net8.0-windows\ZXing.Windows.Compatibility.dll

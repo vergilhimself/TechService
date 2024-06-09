@@ -77,8 +77,12 @@
                     <TextBox x:Name="newcomment" Height="29"/>
                     <Button Click="new_comment_click" Height="25" Width="206" Content="Оставить комментарий"/>
                 </StackPanel>
-                
+                <Image Grid.Row="5"
+        Grid.Column="1"
+    x:Name="QrCodeImage" 
+       VerticalAlignment="Center" Width="200" Height="200"/>
             </StackPanel>
+            
         </ScrollViewer>
         <Button
             Grid.Row="4"
@@ -87,5 +91,6 @@
             VerticalAlignment="Center"
             Content="Сохранить"
             Click="SaveRequestDetails" />
+        
     </Grid>
 </Window>
