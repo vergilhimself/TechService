@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4a2IzW1SQcqMlQvnjq9av1NaUUVoAJGYyHrRuAtBfLMnO1LHvOEK34cmwUp5hCc+bo+CsvTMD7NmKHw+giO/4Q==",
+  "dgSpecHash": "N1UFz8Psc0zpDlAFnCjAPoYl5sdzqy5twPZCzlrZaX1Gtues/bFacabtfp+f5DNfJ1ecuSJHOqt0jihOPH+MKw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fidan\\OneDrive\\Рабочий стол\\Практика_макет\\Практика_макет.csproj",
+  "projectFilePath": "C:\\Users\\fidan\\OneDrive\\Рабочий стол\\ТехСервис\\Практика_макет\\Практика_макет.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fidan\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\fidan\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

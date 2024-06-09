@@ -31,7 +31,7 @@ namespace Практика_макет
         public void LoadRequests()
         {
             // Загружаем заявки для текущего пользователя
-            List<RequestDetail> requests = GetRequestsByUserRole(EnteredUser.Instance.CurrentType);
+            List<RequestDetail> requests = DbUse.GetRequestsByUserRole(EnteredUser.Instance.CurrentType);
             Requests.Clear();
             // Обновляем коллекцию данных Requests
             foreach (var request in requests)
@@ -43,63 +43,7 @@ namespace Практика_макет
         }
 
 
-        public List<RequestDetail> GetRequestsByUserRole(int currentUserRole)
-        {
-            using (ApplicationDbContext dbContext = new ApplicationDbContext())
-            {
-                // Получаем текущего пользователя из сессии
-                User currentUser = EnteredUser.Instance.CurrentUser;
-
-                if (currentUser != null)
-                {
-                    List<RequestDetail> requestDetails = new List<RequestDetail>();
-
-                    switch (currentUserRole)
-                    {
-                        case 4:
-                        case 2:
-                            // Если роль пользователя 4 или 2, выводим только его заявки
-                            requestDetails = dbContext.RequestsDetails
-                                 .Include(rd => rd.Requests)
-                                     .ThenInclude(r => r.Client)
-                                 .Include(rd => rd.Requests)
-                                     .ThenInclude(r => r.Master)
-                                 .Include(rd => rd.RequestsDetailsStatus)
-                                     .ThenInclude(rds => rds.RequestStatus)
-                                 .Include(rd => rd.RequestsDetailsTech)
-                                     .ThenInclude(rdt => rdt.HomeTech)
-                                 .Where(rd => rd.Requests.ClientID == currentUser.UserID)
-                                 .ToList();
-                            break;
-                        case 1:
-                        case 3:
-                            // Если роль пользователя 1 или 3, выводим все заявки
-                            requestDetails = dbContext.RequestsDetails
-                                 .Include(rd => rd.Requests)
-                                     .ThenInclude(r => r.Client)
-                                 .Include(rd => rd.Requests)
-                                     .ThenInclude(r => r.Master)
-                                 .Include(rd => rd.RequestsDetailsStatus)
-                                     .ThenInclude(rds => rds.RequestStatus)
-                                 .Include(rd => rd.RequestsDetailsTech)
-                                     .ThenInclude(rdt => rdt.HomeTech)
-                                 .ToList();
-                            break;
-                        default:
-                            // Для остальных ролей возвращаем пустой список заявок
-                            break;
-                    }
-
-                    return requestDetails;
-                }
-                else
-                {
-                    // Если текущий пользователь не установлен, возвращаем пустой список заявок
-                    MessageBox.Show("no user");
-                    return new List<RequestDetail>();
-                }
-            }
-        }
+        
 
 
 

@@ -4,17 +4,17 @@ namespace Практика_макет
 {
     public class ApplicationDbContext : DbContext
     {
-        public DbSet<User> Users { get; set; }
-        public DbSet<Type> Types { get; set; }
-        public DbSet<UserCredential> UserCredentials { get; set; }
-        public DbSet<UserType> UserTypes { get; set; }
-        public DbSet<Comment> Comments { get; set; }
-        public DbSet<RequestStatus> RequestStatus { get; set; }
-        public DbSet<HomeTech> HomeTech { get; set; }
-        public DbSet<RequestDetail> RequestsDetails { get; set; }
-        public DbSet<RequestsDetailsStatus> RequestsDetailsStatus { get; set; }
-        public DbSet<RequestDetailTech> RequestsDetailsTech { get; set; }
-        public DbSet<Request> Requests { get; set; }
+        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Type> Types { get; set; }
+        public virtual DbSet<UserCredential> UserCredentials { get; set; }
+        public virtual DbSet<UserType> UserTypes { get; set; }
+        public virtual DbSet<Comment> Comments { get; set; }
+        public virtual DbSet<RequestStatus> RequestStatus { get; set; }
+        public virtual DbSet<HomeTech> HomeTech { get; set; }
+        public virtual DbSet<RequestDetail> RequestsDetails { get; set; }
+        public virtual DbSet<RequestsDetailsStatus> RequestsDetailsStatus { get; set; }
+        public virtual DbSet<RequestDetailTech> RequestsDetailsTech { get; set; }
+        public virtual DbSet<Request> Requests { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

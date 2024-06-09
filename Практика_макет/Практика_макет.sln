@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Практика_макет", "Практика_макет.csproj", "{070BA476-3077-49ED-A612-5510E848829E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Практика_макет", "Практика_макет.csproj", "{070BA476-3077-49ED-A612-5510E848829E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject2", "..\TestProject2\TestProject2.csproj", "{334B582B-7304-4DFB-841F-A474731AC91B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{070BA476-3077-49ED-A612-5510E848829E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{070BA476-3077-49ED-A612-5510E848829E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{070BA476-3077-49ED-A612-5510E848829E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{334B582B-7304-4DFB-841F-A474731AC91B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{334B582B-7304-4DFB-841F-A474731AC91B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{334B582B-7304-4DFB-841F-A474731AC91B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{334B582B-7304-4DFB-841F-A474731AC91B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -25,32 +25,25 @@ namespace Практика_макет
             Console.WriteLine("auth window");
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        public void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
 
-        private void Открыть_регистрацию(object sender, RoutedEventArgs e)
+        public void Открыть_регистрацию(object sender, RoutedEventArgs e)
         {
             Регистрация регистрация = new Регистрация();
             регистрация.Show();
             this.Close();
         }
 
-        private void Открыть_список_заявок(object sender, RoutedEventArgs e)
+        public void Открыть_список_заявок(object sender, RoutedEventArgs e)
         {
-
-            using (ApplicationDbContext dbContext = new ApplicationDbContext())
-            {
-                var user = dbContext.UserCredentials
-                                    .FirstOrDefault(uc => uc.Login == Login.Text && uc.Password == Password.Password);
-                
-                if (user != null)
+            bool success = DbUse.Auth(Login.Text, Password.Password);
+            
+                if (success)
                 {
-                    var userdata = dbContext.Users.FirstOrDefault(u => u.UserID == user.UserID);
-                    EnteredUser.Instance.CurrentUser = userdata;
-                    var usertype = dbContext.UserTypes.FirstOrDefault(u => u.UserID == userdata.UserID);
-                    EnteredUser.Instance.CurrentType = usertype.TypeID;
+                    
                     // Пользователь найден, открыть новое окно
                     Список_заявок регистрация = new Список_заявок();
                     регистрация.Show();
@@ -66,4 +59,3 @@ namespace Практика_макет
         }
     }
 
-}

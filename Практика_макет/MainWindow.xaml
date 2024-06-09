@@ -26,7 +26,7 @@
         <StackPanel Grid.Row="1" Grid.Column="1">
             <Label Content="Авторизация" />
             <Label Content="Введите логин:" />
-            <TextBox TextChanged="TextBox_TextChanged" Name="Login"/>
+            <TextBox TextChanged="TextBox_TextChanged" x:Name="Login"/>
             <Label Content="Введите пароль:" />
             <PasswordBox x:Name="Password"/>
             <Button Click="Открыть_список_заявок" Content="Авторизироваться" />
