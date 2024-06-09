@@ -1,0 +1,1 @@
+--Требуется EF Core для SqlServer
